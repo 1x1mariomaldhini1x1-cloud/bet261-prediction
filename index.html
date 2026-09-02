@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet261 Virtual Predictor</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        body { background-color: #121212; color: #ffffff; padding: 15px; }
+        .card { background: #1e1e1e; border-radius: 12px; padding: 15px; margin-bottom: 15px; border: 1px solid #333; }
+        h2 { color: #00e676; text-align: center; margin-bottom: 15px; font-size: 20px; }
+        label { display: block; margin: 8px 0 4px; font-size: 14px; color: #ccc; }
+        input { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a2a; color: #fff; font-size: 16px; }
+        button { width: 100%; padding: 12px; background: #00e676; color: #000; font-weight: bold; border: none; border-radius: 6px; font-size: 16px; margin-top: 15px; cursor: pointer; }
+        button:hover { background: #00c853; }
+        .result-box { display: none; }
+        .prob-bar { background: #333; height: 18px; border-radius: 9px; overflow: hidden; margin-top: 5px; }
+        .fill-1 { background: #2196F3; height: 100%; width: 0%; transition: 0.5s; }
+        .fill-x { background: #FFC107; height: 100%; width: 0%; transition: 0.5s; }
+        .fill-2 { background: #E91E63; height: 100%; width: 0%; transition: 0.5s; }
+        .res-item { margin-bottom: 12px; }
+        .badge { background: #333; padding: 6px 12px; border-radius: 4px; display: inline-block; font-weight: bold; color: #00e676; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>Bet261 Virtual Predictor</h2>
+
+    <div class="card">
+        <label>Côte Equipe 1 (Home - 1)</label>
+        <input type="number" id="c1" step="0.01" placeholder="Ex: 2.10">
+
+        <label>Côte Nul (Draw - X)</label>
+        <input type="number" id="cx" step="0.01" placeholder="Ex: 3.10">
+
+        <label>Côte Equipe 2 (Away - 2)</label>
+        <input type="number" id="c2" step="0.01" placeholder="Ex: 3.40">
+
+        <button onclick="calculerPrediction()">MAMINAVINA SCORE</button>
+    </div>
+
+    <div class="card result-box" id="results">
+        <h3 style="color:#00e676; text-align:center; margin-bottom:10px;">Vokatra Vinavina</h3>
+        
+        <div class="res-item">
+            <p>1 (Home Win): <span id="p1">0</span>%</p>
+            <div class="prob-bar"><div class="fill-1" id="b1"></div></div>
+        </div>
+        <div class="res-item">
+            <p>X (Draw): <span id="px">0</span>%</p>
+            <div class="prob-bar"><div class="fill-x" id="bx"></div></div>
+        </div>
+        <div class="res-item">
+            <p>2 (Away Win): <span id="p2">0</span>%</p>
+            <div class="prob-bar"><div class="fill-2" id="b2"></div></div>
+        </div>
+
+        <hr style="border-color:#333; margin:15px 0;">
+
+        <p><strong>Score Exact Azo Inoana Indrindra:</strong></p>
+        <div class="badge" id="scorePred">-</div>
+
+        <p style="margin-top:10px;"><strong>Soso-kevitra Safidy (Conseil):</strong></p>
+        <div class="badge" id="conseilPred">-</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
